@@ -1,4 +1,4 @@
-from fungsi_pizza import pizza
+from fungsi_pizza1 import pizza
 
 #cara order pizza
 def order():
@@ -40,10 +40,10 @@ def order():
 
         #Menambahkan ekstra keju
         extrakeju = input("""
-        Extra Cheese
+        Extra Keju
         1. Yes
         2. No
-        Pilih iya/tidak?""").lower()
+        Pilih Iya/Tidak?""").lower()
 
         #harga pesanan pizza berdasarkan jenis crust, size, dan ekstra keju ke total harga.
         harga_pizza = pizza(crust, size, extrakeju)
