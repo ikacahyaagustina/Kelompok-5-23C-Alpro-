@@ -1,69 +1,64 @@
 from fungsi_pizza import pizza
 
-#fungsi order pizza
+#cara order pizza
 def order():
 
-    #List harga pesanan
+    #List pesanan
     pesanan = []
 
-    #Loop agar bisa digunakan order pizza variasi lain 
+    #Loop digunakan untuk order pizza variasi lain
     while True:
         #Variabel untuk inisiasi total harga awal
         totalHarga = 0
 
-        #Menampilkan varian pizza
-        topping = input("""
+        #Pilihan topping pizza
+        toppingpizza = input("""
         Varian topping
         1. Frankfurter BBQ
         2. Meat Monsta
         3. Super Supreme
         4. Super Supreme Chicken
-        Pilihan anda:""").lower()
+        Pilih topping apa?""").lower()
 
-        #Pilihan crust atau kulit yang bisa dipesan pelanggan
-        crust1 = input("""
+        #Pilihan crust pizza yang dipesan pelanggan
+        crust = input("""
         Varian Crust
         1. Pan Pizza
         2. Stuffed Crust Cheese
         3. Stuffed Crust Sausage
         4. Cheesy Bite
         5. Crown Crust
-        Pilihan anda:""").lower()
+        Pilih crust apa?""").lower()
 
-        #Pilihan ukuran dari pizza
-        size1 = input("""
+        #Pilihan ukuran pizza
+        size = input("""
         Size
         1. Personal
         2. Regular
         3. Large
-        Pilihan anda:""").lower()
+        Pilih size apa?""").lower()
 
-        #Menambahkan variasi ekstra keju
-        extra1 = input("""
+        #Menambahkan ekstra keju
+        extrakeju = input("""
         Extra Cheese
         1. Yes
         2. No
-        Pilihan anda:""").lower()
+        Pilih iya/tidak?""").lower()
 
         #harga pesanan pizza berdasarkan jenis crust, size, dan ekstra keju ke total harga.
-        harga_pizza = pizza(crust1, size1, extra1)
+        harga_pizza = pizza(crust, size, extrakeju)
 
         #Menambahkan harga pesanan pizza ke variabel totalharga
         totalHarga += harga_pizza
 
         #Membuat input untuk jumlah varian yang telah dipesan
         jumlah_order = int(input("Berapa jumlah pizza yang ingin anda order? "))
-        totalHarga *= jumlah_order  # Menghitung total harga per pesanan 
-
+        totalHarga *= jumlah_order  
+        
         #Menambah totalHarga ke list pesanan
         pesanan.append(totalHarga)
-
-        #Membuat input untuk bisa memilih apakah ingin memesan variasi pizza lain atau tidak
-        nextOrder = input("Apakah anda ingin memesan varian lain (Yes/No)? ").lower()
-
-        #Percabangan apakah ada variasi pesanan pizza baru
-        if nextOrder != 'yes': #Jika input masuk selain 'yes'
-            break              #Maka program looping akan berhenti
+        
+        break              #Maka program looping akan berhenti
 
     #menambah kan semua pesanan
     total_pesanan = sum(pesanan)
