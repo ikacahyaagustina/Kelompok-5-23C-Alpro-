@@ -12,15 +12,15 @@ def order():
         totalHarga = 0
 
         #Menampilkan varian pizza
-        varian1 = input("""
-        Varian Pizza
+        topping = input("""
+        Varian topping
         1. Frankfurter BBQ
         2. Meat Monsta
         3. Super Supreme
         4. Super Supreme Chicken
         Pilihan anda:""").lower()
 
-        #Menampilkan pilihan crust atau kulit yang bisa dipesan pelanggan
+        #Pilihan crust atau kulit yang bisa dipesan pelanggan
         crust1 = input("""
         Varian Crust
         1. Pan Pizza
@@ -30,7 +30,7 @@ def order():
         5. Crown Crust
         Pilihan anda:""").lower()
 
-        #Menambahkan ukuran dari pizza
+        #Pilihan ukuran dari pizza
         size1 = input("""
         Size
         1. Personal
@@ -38,14 +38,14 @@ def order():
         3. Large
         Pilihan anda:""").lower()
 
-        #Menambahkan variasi penambahan keju
+        #Menambahkan variasi ekstra keju
         extra1 = input("""
         Extra Cheese
         1. Yes
         2. No
         Pilihan anda:""").lower()
 
-        #harga pesanan pizza berdasarkan jenis kulit, ukuran, dan tambahan keju ke total harga.
+        #harga pesanan pizza berdasarkan jenis crust, size, dan ekstra keju ke total harga.
         harga_pizza = pizza(crust1, size1, extra1)
 
         #Menambahkan harga pesanan pizza ke variabel totalharga
