@@ -1,32 +1,44 @@
-#Fungsi pemilihan pizza dengan parameter crust, size, dan extra
-def pizza(crust, size, extra):
+#pemesanan pizza menggunakan penambahan crust, size, dan extrakeju
+def toppingpizza(crust, size, extrakeju):
     #Harga awal
     harga = 0
 
-    #pilihan statement di varian crust pan pizza
-    if crust == 'pan pizza' and size == 'personal':#Kondisi apakah benar pesanan pan pizza dengan ukuran personal
-        harga += 43637                             #Menambahkan harga pesanan(harga akan otomatis diperbarui) 
-        if extra == 'yes':                         #Jika pesanan ingin extra keju
-            harga += 13636                         #Maka harga pesanan akan ditambah lagi sesuai harga tersebut
-    elif crust == 'pan pizza' and size == 'regular':#Kondisi apakah benar pesanan pan pizza dengan ukuran regular
-        harga += 100910                             #Menambahkan harga pesanan(harga akan otomatis diperbarui) 
-        if extra == 'yes':                          #Jika pesanan ingin extra keju
-            harga += 16364                          #Maka harga pesanan akan ditambah lagi sesuai harga tersebut
-    elif crust == 'pan pizza' and size == 'large':#Kondisi apakah benar pesanan pan pizza dengan ukuran personal
-        harga += 132727                           #Menambahkan harga pesanan(harga akan otomatis diperbarui)
+    #pilihan pizza di varian crust pan pizza dan size pizza
+    if crust == 'pan pizza' and size == 'personal':
+        #Kondisi pesanan varian pan pizza dan personal, maka memperbarui harga pesanan
+        harga += 43637  
+        #jika pesanan ingin menambahkan keju,maka harga pesanan otomatis akan ditambahkan
+        if extra == 'yes':                        
+            harga += 13636               
+    elif crust == 'pan pizza' and size == 'regular':
+        #Kondisi pesanan varian pan pizza dan reguler, maka memperbarui harga pesanan
+        harga += 100910 
+        #jika pesanan ingin menambahkan keju,maka harga pesanan otomatis akan ditambahkan
+        if extra == 'yes':                          
+            harga += 16364                         
+    elif crust == 'pan pizza' and size == 'large':
+        #Kondisi pesanan varian pan pizza dan large, maka memperbarui harga pesanan
+        harga += 132727   
+        #jika pesanan ingin menambahkan keju,maka harga pesanan otomatis akan ditambahkan
         if extra == 'yes':
             harga += 19091
     #pilihan statement di varian stuffed crust cheese
     elif crust == 'stuffed crust cheese' and size == 'personal':
+         #Kondisi pesanan varian stuffed crust cheese dan personal, maka memperbarui harga pesanan
         harga += 55455
+        #jika pesanan ingin menambahkan keju,maka harga pesanan otomatis akan ditambahkan
         if extra == 'yes':
             harga += 13636
     elif crust == 'stuffed crust cheese' and size == 'regular':
+         #Kondisi pesanan varian stuffed crust cheese reguler, maka memperbarui harga pesanan
         harga += 120910
+        #jika pesanan ingin menambahkan keju,maka harga pesanan otomatis akan ditambahkan
         if extra == 'yes':
             harga += 16364
     elif crust == 'stuffed crust cheese' and size == 'large':
+         #Kondisi pesanan varian stuffed crust cheese large, maka memperbarui harga pesanan
         harga += 160000
+        #jika pesanan ingin menambahkan keju,maka harga pesanan otomatis akan ditambahkan
         if extra == 'yes':
             harga += 19091
     #pilihan statement di varian stuffed crust sausage
